@@ -96,8 +96,7 @@ The IOOS SOS Profile tests have originated from the official OGC CITE test set f
 |**getCapabilities:IOOS-SOS.GetCapabilities-ResponseContainsValidObservedProperty.2**|None of the \<sos:observedProperty\> elements provides a value of vector phenomenon (i.e. wind, wave, current) instead of a scalar components of a composite phenomenon describing the vector, and defined in the IOOS Parameter Vocabulary (e.g.: http://mmisw.org/ont/ioos/parameter/wave).| **R** |
 |**getCapabilities:IOOS-SOS.GetCapabilities-ResponseContainsValidResponseMode.1**|Each ObservationOffering provides a valid responseMode value (i.e. one of the “inline”, “out-of-band”, “attached”, “resultTemplate” strings).| **R** |
 | | | |
-| | | |
-| | | |
+
 
 ### **DescribeSensor Tests**{: style="color: crimson"} 
 
