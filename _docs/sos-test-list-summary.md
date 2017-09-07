@@ -1,5 +1,5 @@
 ---
-title: List of SOS Tests
+title: List of Compliance and Interoperability Tests for IOOS SOS v1.0
 tags: [formatting]
 keywords: bla, bla, bla 
 last_updated: May 31, 2017
@@ -14,6 +14,8 @@ toc: false
 * TOC
 {:toc}
 -->
+
+## **Introduction**{: style="color: crimson"}
 
 This document describes a collection of tests that have to be run in order to ensure a required level of compliance with IOOS SOS Profile 1.0 (IOOS Convention), and official OGC SOS 1.0.0 specification.
 

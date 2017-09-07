@@ -1,13 +1,13 @@
 ---
-title: IOOS SOS WSDD 1.0
+title: <b>Web Service Description Document for IOOS SOS 1.0</b> 
 tags: [formatting]
 keywords: notes, tips, cautions, warnings, admonitions
 last_updated: July 3, 2016
-summary: IOOS SOS v1.0 Web Service Description
+summary: A detailed description of the IOOS Sensor Observation Service v1.0, which is based on the OpenGIS SOS 1.0.0 Implementation Specification (OGC 06-009r6)
 sidebar: mydoc_sidebar
 #topnav: topnav
 toc: false
-#permalink: sos-wsdd-github-notoc.html
+#permalink: sos-wsdd-1-0.html
 ---
 
 <!--
@@ -16,7 +16,7 @@ toc: false
   -->
 
 
-# **Overview**{: style="color: crimson"} 
+# **Introduction**{: style="color: crimson"}
 
 This Web Service Description Document (WSDD) provides a description of a Sensor Observation Service (SOS) that has been developed by U.S. IOOS for deployment by NOAA data providers and IOOS Regional Associations (RAs). This service provides a service consumer with the capability to access ocean observations data products, such as time series and profiles, which are encoded in XML and included in the SWE Common Data Model.
 
@@ -113,7 +113,7 @@ For HTTP POST operation, a URL does not require additional parameters to be appe
 
 **```http://SERVERNAME:[PORT]/SOS-WEBAPP/sos```**
 
-# **Operations**{: style="color: crimson"}
+# **Service Operations**{: style="color: crimson"}
 
 The OGC SOS interface is based on the OGC Web Service Common specification, thus, it has shares structures and data types of service requests with the other OGC Web Services. In the case of SOS, the operation signature is constrained by the observation schema, as it defines the response model. The SOS v1.0 defines three operational profiles:
 

@@ -29,13 +29,13 @@ entries:
 #      url: /sos-guidelines-jekyll/index.html
 #      output: web
 
-  - title: "Service Description for IOOS SOS 1.0"
+  - title: "Web Service Description Document for IOOS SOS 1.0"
     output: web, pdf
 
     folderitems:
 
     - title: Introduction
-      url: /sos-wsdd-1-0.html#overview
+      url: /sos-wsdd-1-0.html#introduction
       output: web
 
       subfolders:
@@ -45,36 +45,36 @@ entries:
 
         subfolderitems:
 
-        - title: OGC SOS Implementation Standards
+        - title: "OGC SOS Implementation Standards"
           url: /sos-wsdd-1-0.html#conformance-to-standards-and-conventions
           output: web
 
-        - title: NetCDF Climate and Forecast Metadata Convention
+        - title: "NetCDF Climate and Forecast Metadata Convention"
           url: /sos-wsdd-1-0.html#netcdf-climate-and-forecast-metadata-convention
           output: web
 
-        - title: IOOS Convention and SOS Templates
+        - title: "IOOS Convention and SOS Templates"
           url: /sos-wsdd-1-0.html#ioos-convention-and-sos-templates
           output: web
 
-        - title: Coordinate System Axis Order
+        - title: "Coordinate System Axis Order"
           url: /sos-wsdd-1-0.html#coordinate-system-axis-order
           output: web
 
-        - title: Namespaces
+        - title: "Namespaces"
           url: /sos-wsdd-1-0.html#namespaces
           output: web
 
-        - title: Capitalization
+        - title: "Capitalization"
           url: /sos-wsdd-1-0.html#capitalization
           output: web
 
-        - title: Use of URL in HTTP GET and POST Requests
+        - title: "Use of URL in HTTP GET and POST Requests"
           url: /sos-wsdd-1-0.html#use-of-url-in-http-get-and-post-requests
           output: web
 
-    - title: Service Operations Overview
-      url: /sos-wsdd-1-0.html#operations
+    - title: Service Operations
+      url: /sos-wsdd-1-0.html#service-operations
       output: web
 
       subfolders:
