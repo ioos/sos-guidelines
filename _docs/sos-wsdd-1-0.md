@@ -1,5 +1,5 @@
 ---
-title: <b>Web Service Description Document for IOOS SOS 1.0</b> 
+title: Web Service Description Document for IOOS SOS 1.0
 tags: [formatting]
 keywords: notes, tips, cautions, warnings, admonitions
 last_updated: July 3, 2016
