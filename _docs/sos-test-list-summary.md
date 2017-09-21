@@ -1,7 +1,7 @@
 ---
 title: List of Compliance and Interoperability Tests for IOOS SOS v1.0
 tags: [formatting]
-keywords: bla, bla, bla 
+keywords: SOS, tests, compliance, interopability 
 last_updated: May 31, 2017
 summary: List of OGC CITE general and IOOS-specific tests for IOOS SOS 1.0
 #sidebar: product2_sidebar
