@@ -2,9 +2,9 @@
 
 entries:
 - title: sidebar
-  product: IOOS SOS WSDD, Templates, and Tests
+  product: Menu
   levels: three
-  version: 
+  version:
   folders:
 
   - title:
@@ -69,7 +69,7 @@ entries:
       output: web
 
       subfolders:
-      
+
       - title: "GetCapabilities"
         output: web, pdf
 
@@ -297,4 +297,3 @@ entries:
     - title: Applicable Documents
       url: /sos-wsdd-1-0-reference.html#applicable-documents
       output: web, pdf
-
