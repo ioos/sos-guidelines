@@ -4,8 +4,6 @@ tags: [formatting]
 keywords: notes, tips, cautions, warnings, admonitions
 last_updated: July 3, 2016
 summary: Template for a SWE Data Record's static and dynamic fields for multiple stations with multiple sensors including quality elements for some quantities
-#sidebar: product1_sidebar
-sidebar: mydoc_sidebar
 toc: false
 #permalink: sos-wsdd-github-notoc.html
 
@@ -35,7 +33,7 @@ toc: false
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://www.opengis.net/swe/2.0 http://schemas.opengis.net/sweCommon/2.0/swe.xsd"
   definition="http://mmisw.org/ont/ioos/swe_element_type/observationRecord">
-  
+
   <!-- STATIC DATA -->
   <!-- This field "stations" contains static data for all stations and sensors in the response -->
   <!-- Static data is linked to dynamic data (sensor observation values) via an abbreviated, -->
@@ -53,16 +51,16 @@ toc: false
     <swe2:DataRecord definition="http://mmisw.org/ont/ioos/swe_element_type/stations">
       <!-- Static data for the first station, urn:ioos:station:wmo:41001 -->
       <!-- Required elements include for each station: stationID, platformLocation, sensors -->
-      <swe2:field name="wmo_41001"> 
+      <swe2:field name="wmo_41001">
         <!-- IoosTech Convention: -->
         <!-- The data record containing the static data for a station shall be defined -->
-        <swe2:DataRecord id="wmo_41001" 
+        <swe2:DataRecord id="wmo_41001"
           definition="http://mmisw.org/ont/ioos/swe_element_type/station">
           <swe2:field name="stationID">
             <!-- IoosTech Convention: -->
             <!-- The text element containing the station id shall be defined -->
             <swe2:Text definition="http://mmisw.org/ont/ioos/definition/stationID">
-              
+
               <swe2:quality>
                 <!-- Optional element can contain any valid static quality element for this station -->
               </swe2:quality>
@@ -126,7 +124,7 @@ toc: false
                 <!-- The data record containing the static data for a sensor shall be defined -->
                 <!-- Reminder: the DataRecord id of a sensor in the static block matches the DataChoice item -->
                 <!-- name in the dynamic block -->
-                <swe2:DataRecord id="wmo_41001_sensor1" 
+                <swe2:DataRecord id="wmo_41001_sensor1"
                   definition="http://mmisw.org/ont/ioos/swe_element_type/sensor">
                   <swe2:field name="sensorID">
                     <!-- Field: sensorID -->
@@ -136,11 +134,11 @@ toc: false
                     <!-- IoosTech Convention: -->
                     <!-- The text element containing the sensor id shall be defined -->
                     <swe2:Text definition="http://mmisw.org/ont/ioos/definition/sensorID">
-                      
+
                       <swe2:quality>
                         <!-- Optional element can contain any valid static quality element for this sensor -->
                       </swe2:quality>
-                      
+
                       <swe2:value>urn:ioos:sensor:wmo:41001:sensor1</swe2:value>
                     </swe2:Text>
                   </swe2:field>
@@ -160,7 +158,7 @@ toc: false
                   </swe2:field>
                 </swe2:DataRecord>
               </swe2:field>
-              
+
               <swe2:field name="wmo_41001_sensor2">
                 <!-- IoosTech Convention: -->
                 <!-- The data record containing the static data for a sensor shall be defined -->
@@ -199,7 +197,7 @@ toc: false
       <swe2:field name="wmo_41002">
         <!-- IoosTech Convention: -->
         <!-- The data record containing the static data for a station shall be defined -->
-        <swe2:DataRecord id="wmo_41002" 
+        <swe2:DataRecord id="wmo_41002"
           definition="http://mmisw.org/ont/ioos/swe_element_type/station">
           <swe2:field name="stationID">
             <!-- IoosTech Convention: -->
@@ -243,7 +241,7 @@ toc: false
                 <!-- The data record containing the static data for a sensor shall be defined -->
                 <!-- Reminder: the DataRecord id of a sensor in the static block matches the DataChoice item -->
                 <!-- name in the dynamic block -->
-                <swe2:DataRecord id="wmo_41002_sensor1" 
+                <swe2:DataRecord id="wmo_41002_sensor1"
                   definition="http://mmisw.org/ont/ioos/swe_element_type/sensor">
                   <swe2:field name="sensorID">
                     <!-- IoosTech Convention: -->
@@ -266,7 +264,7 @@ toc: false
               <swe2:field name="wmo_41002_sensor2">
                 <!-- IoosTech Convention: -->
                 <!-- The data record containing the static data for a sensor shall be defined -->
-                <swe2:DataRecord id="wmo_41002_sensor2" 
+                <swe2:DataRecord id="wmo_41002_sensor2"
                   definition="http://mmisw.org/ont/ioos/swe_element_type/sensor">
                   <swe2:field name="sensorID">
                     <!-- IoosTech Convention: -->
@@ -294,7 +292,7 @@ toc: false
       <swe2:field name="wmo_41003">
         <!-- IoosTech Convention: -->
         <!-- The data record containing the static data for a station shall be defined -->
-        <swe2:DataRecord id="wmo_41003" 
+        <swe2:DataRecord id="wmo_41003"
           definition="http://mmisw.org/ont/ioos/swe_element_type/station">
           <swe2:field name="stationID">
             <!-- IoosTech Convention: -->
@@ -337,7 +335,7 @@ toc: false
                 <!-- The data record containing the static data for a sensor shall be defined -->
                 <!-- Reminder: the DataRecord id of a sensor in the static block matches the DataChoice item -->
                 <!-- name in the dynamic block -->
-                <swe2:DataRecord id="wmo_41003_sensor1" 
+                <swe2:DataRecord id="wmo_41003_sensor1"
                   definition="http://mmisw.org/ont/ioos/swe_element_type/sensor">
                   <swe2:field name="sensorID">
                     <!-- IoosTech Convention: -->
@@ -403,7 +401,7 @@ toc: false
                   </swe2:constraint>
                 </swe2:Category>
               </swe2:quality>
-              
+
               <swe2:uom xlink:href="http://www.opengis.net/def/uom/ISO-8601/0/Gregorian" />
             </swe2:Time>
           </swe2:field>
@@ -425,7 +423,7 @@ toc: false
                   <!-- wmo_41001_sensor1's observed properties -->
                   <swe2:field name="air_temperature">
                     <swe2:Quantity definition="http://mmisw.org/ont/cf/parameter/air_temperature">
-                      
+
                       <!-- The next 3 elements specify the quality of the Air Temperature field -->
                       <!-- using ndbc qc flags as an example.  -->
                       <swe2:quality>
@@ -452,7 +450,7 @@ toc: false
                           </swe2:constraint>
                         </swe2:Category>
                       </swe2:quality>
-                      
+
                       <swe2:quality>
                         <!-- NDBC DQA Quality -->
                         <!-- Unfortuantly there is no way to specify an array quality elements inside the -->
@@ -489,7 +487,7 @@ toc: false
                           </swe2:constraint>
                         </swe2:Category>
                       </swe2:quality>
-                      
+
                       <swe2:quality>
                         <!-- Second DQA element -->
                         <swe2:Category
@@ -518,7 +516,7 @@ toc: false
                           <swe2:constraint xlink:href="#ndbcDqaFlags"/>
                         </swe2:Category>
                       </swe2:quality>
-                      
+
                       <swe2:nilValues>
                         <swe2:NilValues>
                           <swe2:nilValue reason="http://www.opengis.net/def/nil/OGC/0/BelowDetectionRange"> INF </swe2:nilValue>
@@ -588,8 +586,8 @@ toc: false
             </swe2:DataChoice>
           </swe2:field>
         </swe2:DataRecord>
-      </swe2:elementType>	
-      
+      </swe2:elementType>
+
       <swe2:encoding>
         <!-- SWE encoding and data values -->
         <!-- IoosTech Convention: -->

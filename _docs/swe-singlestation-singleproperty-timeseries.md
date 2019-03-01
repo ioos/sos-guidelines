@@ -4,8 +4,6 @@ tags: [formatting]
 keywords: notes, tips, cautions, warnings, admonitions
 last_updated: July 3, 2016
 summary: Template for a SWE Data Record's static and dynamic fields for a single station with a single sensor
-#sidebar: product1_sidebar
-sidebar: mydoc_sidebar
 toc: false
 #permalink: sos-wsdd-github-notoc.html
 
@@ -32,7 +30,7 @@ toc: false
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://www.opengis.net/swe/2.0 http://schemas.opengis.net/sweCommon/2.0/swe.xsd"
   definition="http://mmisw.org/ont/ioos/swe_element_type/observationRecord">
-  
+
   <!-- STATIC DATA -->
   <!-- This field "stations" contains static data for all stations and sensors in the response -->
   <!-- Static data is linked to dynamic data (sensor observation values) via an abbreviated, -->
@@ -50,10 +48,10 @@ toc: false
     <swe2:DataRecord definition="http://mmisw.org/ont/ioos/swe_element_type/stations">
       <!-- Static data for the first station, urn:ioos:station:wmo:41001 -->
       <!-- Required elements include for each station: stationID, platformLocation, sensors -->
-      <swe2:field name="wmo_41001"> 
+      <swe2:field name="wmo_41001">
         <!-- IoosTech Convention: -->
         <!-- The data record containing the static data for a station shall be defined -->
-        <swe2:DataRecord id="wmo_41001" 
+        <swe2:DataRecord id="wmo_41001"
           definition="http://mmisw.org/ont/ioos/swe_element_type/station">
           <swe2:field name="stationID">
             <!-- IoosTech Convention: -->
@@ -118,7 +116,7 @@ toc: false
                 <!-- The data record containing the static data for a sensor shall be defined -->
                 <!-- Reminder: the DataRecord id of a sensor in the static block matches the DataChoice item -->
                 <!-- name in the dynamic block -->
-                <swe2:DataRecord id="wmo_41001_sensor1" 
+                <swe2:DataRecord id="wmo_41001_sensor1"
                   definition="http://mmisw.org/ont/ioos/swe_element_type/sensor">
                   <swe2:field name="sensorID">
                     <!-- Field: sensorID -->
@@ -220,12 +218,12 @@ toc: false
               <swe2:item name="dummy_item"/>
               <!-- Since DataChoice must contain 2 or more items add a dummy item which is never -->
               <!-- Used in the actual encoding block. We view this as a mistake in the SWE specification -->
-                
+
             </swe2:DataChoice>
           </swe2:field>
         </swe2:DataRecord>
-      </swe2:elementType>	
-      
+      </swe2:elementType>
+
       <swe2:encoding>
         <!-- SWE encoding and data values -->
         <!-- IoosTech Convention: -->

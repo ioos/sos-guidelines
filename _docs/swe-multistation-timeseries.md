@@ -4,8 +4,6 @@ tags: [formatting]
 keywords: notes, tips, cautions, warnings, admonitions
 last_updated: July 3, 2016
 summary: Template for a SWE Data Record's static and dynamic fields for multiple stations with multiple sensors
-#sidebar: product1_sidebar
-sidebar: mydoc_sidebar
 toc: false
 #permalink: sos-wsdd-github-notoc.html
 
@@ -49,10 +47,10 @@ toc: false
     <swe2:DataRecord definition="http://mmisw.org/ont/ioos/swe_element_type/stations">
       <!-- Static data for the first station, urn:ioos:station:wmo:41001 -->
       <!-- Required elements include for each station: stationID, platformLocation, sensors -->
-      <swe2:field name="wmo_41001"> 
+      <swe2:field name="wmo_41001">
         <!-- IoosTech Convention: -->
         <!-- The data record containing the static data for a station shall be defined -->
-        <swe2:DataRecord id="wmo_41001" 
+        <swe2:DataRecord id="wmo_41001"
           definition="http://mmisw.org/ont/ioos/swe_element_type/station">
           <swe2:field name="stationID">
             <!-- IoosTech Convention: -->
@@ -73,7 +71,7 @@ toc: false
             <swe2:Vector definition="http://www.opengis.net/def/property/OGC/0/PlatformLocation"
               referenceFrame="http://www.opengis.net/def/crs-compound?1=http://www.opengis.net/def/crs/EPSG/0/4326&amp;2=http://www.opengis.net/def/crs/EPSG/0/5829"
               localFrame="#wmo_41001_frame">
-              
+
               <!-- Vector: -->
               <!-- The coordinate vector defining the station location in the specified reference frame. -->
               <!--  -->
@@ -118,7 +116,7 @@ toc: false
                 <!-- The data record containing the static data for a sensor shall be defined -->
                 <!-- Reminder: the DataRecord id of a sensor in the static block matches the DataChoice item -->
                 <!-- name in the dynamic block -->
-                <swe2:DataRecord id="wmo_41001_sensor1" 
+                <swe2:DataRecord id="wmo_41001_sensor1"
                   definition="http://mmisw.org/ont/ioos/swe_element_type/sensor">
                   <swe2:field name="sensorID">
                     <!-- Field: sensorID -->
@@ -147,7 +145,7 @@ toc: false
                   </swe2:field>
                 </swe2:DataRecord>
               </swe2:field>
-              
+
               <swe2:field name="wmo_41001_sensor2">
                 <!-- IoosTech Convention: -->
                 <!-- The data record containing the static data for a sensor shall be defined -->
@@ -181,7 +179,7 @@ toc: false
       <swe2:field name="wmo_41002">
         <!-- IoosTech Convention: -->
         <!-- The data record containing the static data for a station shall be defined -->
-        <swe2:DataRecord id="wmo_41002" 
+        <swe2:DataRecord id="wmo_41002"
           definition="http://mmisw.org/ont/ioos/swe_element_type/station">
           <swe2:field name="stationID">
             <!-- IoosTech Convention: -->
@@ -225,7 +223,7 @@ toc: false
                 <!-- The data record containing the static data for a sensor shall be defined -->
                 <!-- Reminder: the DataRecord id of a sensor in the static block matches the DataChoice item -->
                 <!-- name in the dynamic block -->
-                <swe2:DataRecord id="wmo_41002_sensor1" 
+                <swe2:DataRecord id="wmo_41002_sensor1"
                   definition="http://mmisw.org/ont/ioos/swe_element_type/sensor">
                   <swe2:field name="sensorID">
                     <!-- IoosTech Convention: -->
@@ -248,7 +246,7 @@ toc: false
               <swe2:field name="wmo_41002_sensor2">
                 <!-- IoosTech Convention: -->
                 <!-- The data record containing the static data for a sensor shall be defined -->
-                <swe2:DataRecord id="wmo_41002_sensor2" 
+                <swe2:DataRecord id="wmo_41002_sensor2"
                   definition="http://mmisw.org/ont/ioos/swe_element_type/sensor">
                   <swe2:field name="sensorID">
                     <!-- IoosTech Convention: -->
@@ -276,7 +274,7 @@ toc: false
       <swe2:field name="wmo_41003">
         <!-- IoosTech Convention: -->
         <!-- The data record containing the static data for a station shall be defined -->
-        <swe2:DataRecord id="wmo_41003" 
+        <swe2:DataRecord id="wmo_41003"
           definition="http://mmisw.org/ont/ioos/swe_element_type/station">
           <swe2:field name="stationID">
             <!-- IoosTech Convention: -->
@@ -319,7 +317,7 @@ toc: false
                 <!-- The data record containing the static data for a sensor shall be defined -->
                 <!-- Reminder: the DataRecord id of a sensor in the static block matches the DataChoice item -->
                 <!-- name in the dynamic block -->
-                <swe2:DataRecord id="wmo_41003_sensor1" 
+                <swe2:DataRecord id="wmo_41003_sensor1"
                   definition="http://mmisw.org/ont/ioos/swe_element_type/sensor">
                   <swe2:field name="sensorID">
                     <!-- IoosTech Convention: -->
@@ -457,8 +455,8 @@ toc: false
             </swe2:DataChoice>
           </swe2:field>
         </swe2:DataRecord>
-      </swe2:elementType>	
-      
+      </swe2:elementType>
+
       <swe2:encoding>
         <!-- SWE encoding and data values -->
         <!-- IoosTech Convention: -->

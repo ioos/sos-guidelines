@@ -5,7 +5,6 @@ sitemap: true
 #permalink: /pages/template_markup/
 #folder: pages
 sidebar: home_sidebar
-#sidebar: mydoc_sidebar
 tags: [just_testing]
 ---
 ## Template Markdown Examples ##

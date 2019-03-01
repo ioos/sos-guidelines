@@ -4,8 +4,6 @@ tags: [formatting]
 keywords: notes, tips, cautions, warnings, admonitions
 last_updated: July 3, 2016
 summary: Template for a generic (independent of feature type) GetCapabilities response.
-#sidebar: product1_sidebar
-sidebar: mydoc_sidebar
 toc: false
 #permalink: sos-wsdd-github-notoc.html
 
@@ -22,14 +20,14 @@ toc: false
 <!--    OperationMetadata -->
 <!--    Contents - specifically the network offerings-->
 <!--  -->
-<sos:Capabilities 
-  xmlns:sos="http://www.opengis.net/sos/1.0" 
-  xmlns:ows="http://www.opengis.net/ows/1.1" 
-  xmlns:gml="http://www.opengis.net/gml" 
-  xmlns:om="http://www.opengis.net/om/1.0" 
-  xmlns:xlink="http://www.w3.org/1999/xlink" 
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-  xsi:schemaLocation="http://www.opengis.net/sos/1.0 
+<sos:Capabilities
+  xmlns:sos="http://www.opengis.net/sos/1.0"
+  xmlns:ows="http://www.opengis.net/ows/1.1"
+  xmlns:gml="http://www.opengis.net/gml"
+  xmlns:om="http://www.opengis.net/om/1.0"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.opengis.net/sos/1.0
     http://schemas.opengis.net/sos/1.0.0/sosAll.xsd" version="1.0.0">
   <ows:ServiceIdentification>
     <ows:Title>TITLE</ows:Title>
@@ -122,12 +120,12 @@ toc: false
       </ows:AllowedValues>
     </ows:Parameter>
     <ows:ExtendedCapabilities>
-      <gml:metaDataProperty xlink:title="ioosTemplateVersion" 
+      <gml:metaDataProperty xlink:title="ioosTemplateVersion"
         xlink:href="http://code.google.com/p/ioostech/source/browse/#svn%2Ftrunk%2Ftemplates%2FMilestone1.0">
         <gml:version>1.0</gml:version>
       </gml:metaDataProperty>
           <ows:ExtendedCapabilities>
-      <gml:metaDataProperty xlink:title="softwareVersion" 
+      <gml:metaDataProperty xlink:title="softwareVersion"
           xlink:href="http://someURI">
           <gml:version>0.9.4.5</gml:version>
       </gml:metaDataProperty>
@@ -141,7 +139,7 @@ toc: false
     <!-- of the platforms in a network rather than list them as offerings -->
     <!-- in the GetCaps. -->
     <sos:ObservationOfferingList>
-    
+
       <!-- NETWORK_ALL -->
       <sos:ObservationOffering gml:id="network_all">
         <gml:description>All stations</gml:description>

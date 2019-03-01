@@ -4,8 +4,6 @@ tags: [formatting]
 keywords: notes, tips, cautions, warnings, admonitions
 last_updated: July 3, 2016
 summary: IOOS SOS v1.0 Web Service Description
-sidebar: mydoc_sidebar
-#topnav: topnav
 toc: false
 #permalink: sos-wsdd-github-notoc.html
 ---
@@ -17,11 +15,11 @@ toc: false
 
 
 # **Glossary**{: style="color: crimson"}
-   
+
 Term | Definition
 :-----| :--------
 Consumers| In this document, “Consumers” refer to any systems that need to obtain weather data from SOS and connect via a web service interface.
-Service|The IT realization of some self-contained business functionality. An implementation – independent reusable operational function that may be discovered as self-describing interfaces, and invoked using open standard protocols across networks. 
+Service|The IT realization of some self-contained business functionality. An implementation – independent reusable operational function that may be discovered as self-describing interfaces, and invoked using open standard protocols across networks.
 Service Discovery | The processes through which a service consumer may search for and find services, (generally done by providing criteria to search for against a corpus of service metadata which service providers have provided to describe their services).
 Service Oriented  Architecture (SOA) | A paradigm for organizing and utilizing distributed capabilities of services to clients that may be under the control of different ownership domains.  SOA provides a uniform means to offer, discover, interact with and use capabilities to produce desired effects consistent with measurable preconditions and expectations
 Service Registration | The registering process for the agreed service.
@@ -53,7 +51,7 @@ DMAC|Data Management and Communication
 DQA|Data Quality Assurance or Data Quality Assessment
 ENU|East, North, Up directions
 EPSG|European Petroleum Survey Group
-EQC|Equivalent Quality Control or Environmental Quality Commission 
+EQC|Equivalent Quality Control or Environmental Quality Commission
 GEOSS|Global Earth Observation System of Systems
 GML|Geography Markup Language
 GMT|Greenwich Mean Time
@@ -91,7 +89,7 @@ QA|Quality Assurance
 QARTOD|Quality Assurance of Real Time Ocean Data
 QC|Quality Control
 RA|Regional Assotiation
-RDBMS|Relational Database Management System 
+RDBMS|Relational Database Management System
 SOA|Service-Oriented Architecture
 SOAP|Simple Object Access Protocol
 SOS|Sensor Observation Service

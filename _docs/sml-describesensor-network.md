@@ -4,8 +4,6 @@ tags: [formatting]
 keywords: notes, tips, cautions, warnings, admonitions
 last_updated: July 3, 2016
 summary: Template for a generic (independent of feature type) SensorML DescribeSensor response for Network of Stations
-#sidebar: product1_sidebar
-sidebar: mydoc_sidebar
 toc: false
 #permalink: sos-wsdd-github-notoc.html
 
@@ -25,15 +23,15 @@ toc: false
 <!-- The SML document is designed to present useful metadata about the sensor network -->
 <!-- sufficient to determine which additional descriptions or observations are needed. -->
 <!--  -->
-<sml:SensorML 
-  xmlns:sml="http://www.opengis.net/sensorML/1.0.1" 
-  xmlns:gml="http://www.opengis.net/gml" 
-  xmlns:swe="http://www.opengis.net/swe/1.0.1" 
-  xmlns:xlink="http://www.w3.org/1999/xlink" 
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-  xsi:schemaLocation="http://www.opengis.net/sensorML/1.0.1 http://schemas.opengis.net/sensorML/1.0.1/sensorML.xsd" 
+<sml:SensorML
+  xmlns:sml="http://www.opengis.net/sensorML/1.0.1"
+  xmlns:gml="http://www.opengis.net/gml"
+  xmlns:swe="http://www.opengis.net/swe/1.0.1"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.opengis.net/sensorML/1.0.1 http://schemas.opengis.net/sensorML/1.0.1/sensorML.xsd"
   version="1.0.1">
-  
+
   <!-- SERVICE VERSION METADATA -->
   <sml:capabilities name="ioosServiceMetadata">
     <swe:SimpleDataRecord>
@@ -43,21 +41,21 @@ toc: false
         </swe:Text>
       </swe:field>
     </swe:SimpleDataRecord>
-  </sml:capabilities> 
-  
+  </sml:capabilities>
+
   <sml:member>
     <sml:System>
       <gml:description>Collection of all station assets available via the NANOOS SOS service</gml:description>
       <gml:name>urn:ioos:network:nanoos:all</gml:name>
-            
+
       <!-- Spatial bounds of the content described by this network -->
       <gml:boundedBy>
           <gml:Envelope srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
               <gml:lowerCorner>32.7 -75.0</gml:lowerCorner>
               <gml:upperCorner>34.7 -72.0</gml:upperCorner>
           </gml:Envelope>
-      </gml:boundedBy> 
-      
+      </gml:boundedBy>
+
       <!-- =============================================================== -->
       <!-- IDENTIFIERS                                                     -->
       <!-- The networkID, shortName and longName are manditory             -->
@@ -82,7 +80,7 @@ toc: false
           </sml:identifier>
         </sml:IdentifierList>
       </sml:identification>
-      
+
       <!-- =============================================================== -->
       <!-- CLASSIFIERS                                                     -->
       <!-- List any classifiers that apply to this network offering        -->
@@ -140,7 +138,7 @@ toc: false
                   <!-- Required: electronicMailAddress -->
                   <sml:electronicMailAddress>contact@buoys.com</sml:electronicMailAddress>
                 </sml:address>
-                <!-- Optional: onlineResource; but strongly encouraged for operator --> 
+                <!-- Optional: onlineResource; but strongly encouraged for operator -->
                 <sml:onlineResource xlink:href="http://pnw.buoyoperator.org"/>
               </sml:contactInfo>
             </sml:ResponsibleParty>
@@ -159,7 +157,7 @@ toc: false
           </sml:member>
         </sml:ContactList>
       </sml:contact>
-          
+
       <!-- =============================================================== -->
       <!-- COMPONENTS                                                      -->
       <!-- List all component platforms in the network offering            -->
@@ -195,7 +193,7 @@ toc: false
                   </sml:identifier>
                 </sml:IdentifierList>
               </sml:identification>
-   
+
               <!-- Time range for this platform -->
               <sml:capabilities name="observationTimeRange">
                 <swe:DataRecord>
@@ -206,8 +204,8 @@ toc: false
                   </swe:field>
                 </swe:DataRecord>
               </sml:capabilities>
-              
-              
+
+
               <!-- =============================================================== -->
               <!-- LOCATION                                                        -->
               <!-- Station geographic location (lat & lon only, no z)              -->
@@ -219,8 +217,8 @@ toc: false
                   <gml:pos>34.7 -72.73</gml:pos>
                 </gml:Point>
               </sml:location>
-              
-              
+
+
               <!-- =============================================================== -->
               <!-- OUTPUTS                                                         -->
               <!-- A list of the quantities observed by this platform              -->
@@ -238,7 +236,7 @@ toc: false
 
             </sml:System>
           </sml:component>
-          
+
           <!-- Compact form -->
           <sml:component name='wmo_41002'>
             <sml:System>
@@ -257,7 +255,7 @@ toc: false
                   </sml:identifier>
                 </sml:IdentifierList>
               </sml:identification>
-              
+
               <sml:capabilities name="observationTimeRange">
                 <swe:DataRecord>
                   <swe:field name="observationTimeRange">
@@ -267,13 +265,13 @@ toc: false
                   </swe:field>
                 </swe:DataRecord>
               </sml:capabilities>
-              
+
               <sml:location>
                 <gml:Point srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
                   <gml:pos>34.7 -72.73</gml:pos>
                 </gml:Point>
               </sml:location>
-              
+
               <sml:outputs>
                 <sml:OutputList>
                   <sml:output name="Sea Water Temperature">
@@ -286,11 +284,11 @@ toc: false
               </sml:outputs>
             </sml:System>
           </sml:component>
-        
+
         </sml:ComponentList>
-        
+
       </sml:components>
-    
+
     </sml:System>
   </sml:member>
   <!-- No additional members are expected because SOS DescribeSensor only allows a request for a single procedure-->

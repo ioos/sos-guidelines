@@ -4,8 +4,6 @@ tags: [formatting]
 keywords: notes, tips, cautions, warnings, admonitions
 last_updated: July 3, 2016
 summary: Template for a generic (independent of feature type) SensorML DescribeSensor response for a single station
-#sidebar: product1_sidebar
-sidebar: mydoc_sidebar
 toc: false
 #permalink: sos-wsdd-github-notoc.html
 
@@ -19,15 +17,15 @@ toc: false
 <!-- Since Milestone 1.0 really only addresses timeSeries and timeSeriesProfile, only station -->
 <!-- is addressed here. -->
 <!--  -->
-<sml:SensorML 
-  xmlns:sml="http://www.opengis.net/sensorML/1.0.1" 
-  xmlns:gml="http://www.opengis.net/gml" 
-  xmlns:swe="http://www.opengis.net/swe/1.0.1" 
-  xmlns:xlink="http://www.w3.org/1999/xlink" 
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-  xsi:schemaLocation="http://www.opengis.net/sensorML/1.0.1 http://schemas.opengis.net/sensorML/1.0.1/sensorML.xsd" 
+<sml:SensorML
+  xmlns:sml="http://www.opengis.net/sensorML/1.0.1"
+  xmlns:gml="http://www.opengis.net/gml"
+  xmlns:swe="http://www.opengis.net/swe/1.0.1"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.opengis.net/sensorML/1.0.1 http://schemas.opengis.net/sensorML/1.0.1/sensorML.xsd"
   version="1.0.1">
-  
+
   <!-- SERVICE VERSION METADATA -->
   <sml:capabilities name="ioosServiceMetadata">
     <swe:SimpleDataRecord>
@@ -37,14 +35,14 @@ toc: false
         </swe:Text>
       </swe:field>
     </swe:SimpleDataRecord>
-  </sml:capabilities> 
-  
+  </sml:capabilities>
+
   <sml:member>
     <sml:System>
-      <gml:description>Observations at urn:ioos:station:wmo:41001 buoy station, 
+      <gml:description>Observations at urn:ioos:station:wmo:41001 buoy station,
         150 NM East of Cape HATTERAS</gml:description>
       <gml:name>urn:ioos:station:wmo:41001</gml:name>
-      
+
       <!-- ==================================================================== -->
       <!-- PLATFORM IDENTIFIERS                                                 -->
       <!-- ==================================================================== -->
@@ -74,7 +72,7 @@ toc: false
           </sml:identifier>
         </sml:IdentifierList>
       </sml:identification>
-      
+
       <!-- ==================================================================== -->
       <!-- PLATFORM CLASSIFIERS                                                 -->
       <!-- Manditory classifiers for all platforms:                             -->
@@ -156,7 +154,7 @@ toc: false
           </swe:field>
         </swe:SimpleDataRecord>
       </sml:capabilities>
-      
+
       <!-- =============================================================== -->
       <!-- CONTACTS                                                        -->
       <!-- List all publisher and operator contacts that apply to this     -->
@@ -183,7 +181,7 @@ toc: false
                   <!-- Required: electronicMailAddress -->
                   <sml:electronicMailAddress>contact@buoys.com</sml:electronicMailAddress>
                 </sml:address>
-                <!-- Optional: onlineResource; but strongly encouraged for operator --> 
+                <!-- Optional: onlineResource; but strongly encouraged for operator -->
                 <sml:onlineResource xlink:href="http://pnw.buoyoperator.org"/>
               </sml:contactInfo>
             </sml:ResponsibleParty>
@@ -202,7 +200,7 @@ toc: false
           </sml:member>
         </sml:ContactList>
       </sml:contact>
-      
+
       <!-- =============================================================== -->
       <!-- DOCUMENTATION (Optional: experimental in Milestone1.0)          -->
       <!-- External resources for human consumption about this platform    -->
@@ -233,7 +231,7 @@ toc: false
           </sml:member>
         </sml:DocumentList>
       </sml:documentation>
-      
+
       <!-- =============================================================== -->
       <!-- HISTORY (Optional: experimental in Milestone1.0)                -->
       <!-- Events and status changes of the platform such as deployment    -->
@@ -264,7 +262,7 @@ toc: false
           </sml:member>
         </sml:EventList>
       </sml:history>
-      
+
       <!-- =============================================================== -->
       <!-- LOCATION                                                        -->
       <!-- Station geographic location (lat & lon only, no z)              -->
@@ -276,7 +274,7 @@ toc: false
         <gml:pos>34.7 -72.73</gml:pos>
         </gml:Point>
       </sml:location>
-      
+
       <!-- =============================================================== -->
       <!-- COMPONENTS                                                      -->
       <!-- List all component platforms in the network offering            -->
@@ -362,7 +360,7 @@ toc: false
         </sml:ComponentList>
       </sml:components>
       <!-- ============================================================================= -->
-    
+
     </sml:System>
   </sml:member>
 </sml:SensorML>

@@ -4,8 +4,6 @@ tags: [formatting]
 keywords: notes, tips, cautions, warnings, admonitions
 last_updated: July 3, 2016
 summary: Template for a SWE Data Record's static and dynamic fields for a station with profiling sensors including quality elements for some quantities
-#sidebar: product1_sidebar
-sidebar: mydoc_sidebar
 toc: false
 #permalink: sos-wsdd-github-notoc.html
 ---
@@ -55,17 +53,17 @@ toc: false
       <swe2:field name="wmo_41001">
         <!-- IoosTech Convention: -->
         <!-- The data record containing the static data for a station shall be defined -->
-        <swe2:DataRecord id="wmo_41001" 
+        <swe2:DataRecord id="wmo_41001"
           definition="http://mmisw.org/ont/ioos/swe_element_type/station">
           <swe2:field name="stationID">
             <!-- IoosTech Convention: -->
             <!-- The text element containing the station id shall be defined -->
             <swe2:Text definition="http://mmisw.org/ont/ioos/definition/stationID">
-              
+
               <swe2:quality>
                 <!-- Static quality information about this station can be placed here -->  
               </swe2:quality>
- 
+
               <swe2:value>urn:ioos:station:wmo:41001</swe2:value>
             </swe2:Text>
           </swe2:field>
@@ -128,7 +126,7 @@ toc: false
                 <!-- The data record containing the static data for a sensor shall be defined -->
                 <!-- Reminder: the DataRecord id of a sensor in the static block matches the DataChoice item -->
                 <!-- name in the dynamic block -->
-                <swe2:DataRecord id="wmo_41001_sensor1" 
+                <swe2:DataRecord id="wmo_41001_sensor1"
                   definition="http://mmisw.org/ont/ioos/swe_element_type/sensor">
                   <!-- An example of an acoustic doppler current profiler -->
                   <swe2:field name="sensorID">
@@ -139,11 +137,11 @@ toc: false
                     <!-- IoosTech Convention: -->
                     <!-- The text element containing the sensor id shall be defined -->
                     <swe2:Text definition="http://mmisw.org/ont/ioos/definition/sensorID">
-                      
+
                       <swe2:quality>
                         <!-- Static quality information about this sensor can be placed here -->
                       </swe2:quality>
-                      
+
                       <swe2:value>urn:ioos:sensor:wmo:41001:sensor1</swe2:value>
                     </swe2:Text>
                   </swe2:field>
@@ -281,11 +279,11 @@ toc: false
                     <!-- IoosTech Convention: -->
                     <!-- The text element containing the sensor id shall be defined -->
                     <swe2:Text definition="http://mmisw.org/ont/ioos/definition/sensorID">
-                      
+
                       <swe2:quality>
                         <!-- Static quality information about this sensor may be place here -->
                       </swe2:quality>
-                      
+
                       <swe2:value>urn:ioos:sensor:wmo:41001:sensor2</swe2:value>
                     </swe2:Text>
                   </swe2:field>
@@ -356,10 +354,10 @@ toc: false
                           tokenSeparator=","
                           blockSeparator="&#10;" />
                       </swe2:encoding>
-                      <swe2:values> 
-                        -5.0 
-                        -10.0 
-                        -20.0 
+                      <swe2:values>
+                        -5.0
+                        -10.0
+                        -20.0
                       </swe2:values>
                     </swe2:DataArray>
                   </swe2:field>
@@ -396,7 +394,7 @@ toc: false
           <!-- but this is uncommon. -->
           <swe2:field name="time">
             <swe2:Time definition="http://www.opengis.net/def/property/OGC/0/SamplingTime">
-              
+
               <!-- IoosTech Convention: -->
               <!-- This is an optional quality element used to express QC data that applies to an -->
               <!-- entire record. The definition of the Category element spcifies that it applies -->
@@ -412,7 +410,7 @@ toc: false
                   </swe2:constraint>
                 </swe2:Category>
               </swe2:quality>
-              
+
               <swe2:uom xlink:href="http://www.opengis.net/def/uom/ISO-8601/0/Gregorian" />
             </swe2:Time>
           </swe2:field>
@@ -431,7 +429,7 @@ toc: false
                 <!-- IoosTech Convention: -->
                 <!-- The data record containing the dynamic observation descriptors for a sensor shall be defined -->
                 <swe2:DataRecord definition="http://mmisw.org/ont/ioos/swe_element_type/sensor">
-                  
+
                   <swe2:field name="adcpProfile">
                     <swe2:DataArray definition="http://mmisw.org/ont/ioos/swe_element_type/profile">
                       <swe2:elementCount>
@@ -439,7 +437,7 @@ toc: false
                         <!-- Count value is always omitted here and included inline with the encoded -->
                         <!-- data array to allow ragged inner array for trajectories and adcps. -->
                         <swe2:Count />
-                          
+
                       </swe2:elementCount>
                       <swe2:elementType name="profileObservation">
                         <swe2:DataRecord
@@ -454,7 +452,7 @@ toc: false
                             <!--       in the SWE 2.0 spec but doesn't resolve... -->
                             <swe2:Count
                               definition="http://mmisw.org/ont/ioos/swe_element_type/profileIndex">
-                              
+
                               <swe2:quality>
                                 <!-- Quality flags which apply to all data in a bin go here -->
                                 <swe2:Category>
@@ -467,7 +465,7 @@ toc: false
                                   </swe2:constraint>
                                 </swe2:Category>
                               </swe2:quality>
-                              
+
                               <swe2:constraint>
                                 <swe2:AllowedValues>
                                   <swe2:interval>0 4</swe2:interval>
@@ -475,12 +473,12 @@ toc: false
                               </swe2:constraint>
                             </swe2:Count>
                           </swe2:field>
-                          
+
                           <swe2:field name="direction_of_sea_water_velocity">
                             <swe2:Quantity definition="http://mmisw.org/ont/cf/parameter/direction_of_sea_water_velocity">
-                              
+
                               <swe2:quality>
-                                <!-- Quality flags which apply to a single field in a bin go here --> 
+                                <!-- Quality flags which apply to a single field in a bin go here -->
                                 <swe2:Category>
                                   <swe2:constraint>
                                     <swe2:AllowedTokens>
@@ -491,17 +489,17 @@ toc: false
                                   </swe2:constraint>
                                 </swe2:Category>
                               </swe2:quality>
-                              
+
                               <swe2:uom code="deg" />
                             </swe2:Quantity>
                           </swe2:field>
-                          
+
                           <swe2:field name="sea_water_speed">
                             <swe2:Quantity definition="http://mmisw.org/ont/cf/parameter/sea_water_speed">
                               <swe2:uom code="cm/s" />
                             </swe2:Quantity>
                           </swe2:field>
-                          
+
                         </swe2:DataRecord>
                       </swe2:elementType>
                     </swe2:DataArray>
@@ -518,12 +516,12 @@ toc: false
                         <!-- Count value is always omitted here and included inline with the encoded -->
                         <!-- data array to allow ragged inner array for trajectories and adcps -->
                         <swe2:Count />
-                          
+
                       </swe2:elementCount>
                       <swe2:elementType name="profileObservation">
                         <swe2:DataRecord
                           definition="http://mmisw.org/ont/ioos/swe_element_type/profileObservation">
-                          
+
                           <swe2:field name="binIndex">
                             <!-- IoosTech Convention: -->
                             <!-- A count element, constrained by the maximum dimension of the array -->
@@ -539,7 +537,7 @@ toc: false
                               </swe2:constraint>
                             </swe2:Count>
                           </swe2:field>
-                            
+
                           <swe2:field name="sea_water_temperature">
                             <swe2:Quantity definition="http://mmisw.org/ont/cf/parameter/sea_water_temperature">
                               <swe2:quality>
@@ -548,7 +546,7 @@ toc: false
                               <swe2:uom code="Cel" />
                             </swe2:Quantity>
                           </swe2:field>
-                          
+
                         </swe2:DataRecord>
                       </swe2:elementType>
                     </swe2:DataArray>
@@ -588,7 +586,7 @@ toc: false
           tokenSeparator=","
           blockSeparator="&#10;" />
       </swe2:encoding>
-      <swe2:values> 
+      <swe2:values>
         2009-05-23T00:00:00Z,a,wmo_41001_sensor1,2,0,1,359.0,x,10.0,3,2,352.0,y,9.6
         2009-05-23T01:00:00Z,a,wmo_41001_sensor1,1,2,2,345.0,y,10.4
         2009-05-23T02:00:00Z,b,wmo_41001_sensor1,4,0,3,332.0,z,10.5,1,2,334.0,x,10.3,2,3,336.0,z,10.1,3,1,335.0,x,9.9,4,2,333.0,y,9.6

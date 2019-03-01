@@ -4,14 +4,12 @@ tags: [formatting]
 keywords: notes, tips, cautions, warnings, admonitions
 last_updated: July 3, 2016
 summary: Template for a generic (independent of feature type) GetObservation response.
-#sidebar: product1_sidebar
-sidebar: mydoc_sidebar
 toc: false
 #permalink: sos-wsdd-github-notoc.html
 
 ---
 
-> **NOTE: This is a generic template with empty result block; for details, see specific Result Block templates.** 
+> **NOTE: This is a generic template with empty result block; for details, see specific Result Block templates.**
 
 
 ```XML
@@ -67,7 +65,7 @@ toc: false
       <!-- =========================================================== -->
       <gml:description>
         Observations at point station urn:ioos:station:wmo:41001, 150 NM East of Cape
-        HATTERAS. Observations at point station urn:ioos:station:wmo:41002, S HATTERAS 
+        HATTERAS. Observations at point station urn:ioos:station:wmo:41002, S HATTERAS
         - 250 NM East of Charleston, SC
       </gml:description>
 
@@ -178,16 +176,16 @@ toc: false
       <!-- (THE "DATA" BLOCK)                                          -->
       <!-- =========================================================== -->
       <om:result>
-        <!-- This block contains a SWE Data Record conforming to the   --> 
+        <!-- This block contains a SWE Data Record conforming to the   -->
         <!-- appropriate result block template in Milestone 1.0.       -->
       </om:result>
 
     </om:Observation>
   </om:member>
-  
+
   <om:member>
     <!-- A different feature type may be returned in this member -->
   </om:member>
-  
+
 </om:ObservationCollection>
 ```

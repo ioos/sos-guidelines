@@ -1,11 +1,9 @@
 ---
 title: List of Compliance and Interoperability Tests for IOOS SOS v1.0
 tags: [formatting]
-keywords: SOS, tests, compliance, interopability 
+keywords: SOS, tests, compliance, interopability
 last_updated: May 31, 2017
 summary: List of OGC CITE general and IOOS-specific tests for IOOS SOS 1.0
-#sidebar: product2_sidebar
-sidebar: mydoc_sidebar
 toc: false
 #permalink: sos-test-list-github-notoc-summary.html
 ---
@@ -19,7 +17,7 @@ toc: false
 
 This document describes a collection of tests that have to be run in order to ensure a required level of compliance with IOOS SOS Profile 1.0 (IOOS Convention), and official OGC SOS 1.0.0 specification.
 
-The collection includes both OGC Standard and IOOS Profile compliance tests. The goal of OGC compliance tests is to ensure that the service is to a certain extent compliant with the OGC specifications. The tests are essentially the same as the official OGC CITE test set for SOS 1.0.0; however, some tests were marked out as optional for the current phase of IOOS SOS development, e.g. verification of exception report messages. 
+The collection includes both OGC Standard and IOOS Profile compliance tests. The goal of OGC compliance tests is to ensure that the service is to a certain extent compliant with the OGC specifications. The tests are essentially the same as the official OGC CITE test set for SOS 1.0.0; however, some tests were marked out as optional for the current phase of IOOS SOS development, e.g. verification of exception report messages.
 
 > _**NOTE**: The OGC tests based on HTTP POST requests cannot be used with ncSOS instances because ncSOS does not support POST binding._
 
@@ -29,7 +27,7 @@ The IOOS SOS Profile tests have originated from the official OGC CITE test set f
 
 ## **OWS Common Tests**{: style="color: crimson"}  
 
-### **owsTests:ows-main**{: style="color: crimson"} 
+### **owsTests:ows-main**{: style="color: crimson"}
 
 **(_Run test group for GetCapabilities requests using the GET method._)**
 
@@ -62,7 +60,7 @@ The IOOS SOS Profile tests have originated from the official OGC CITE test set f
 
 ### **GetCapabilities Tests**{: style="color: crimson"}  
 
-#### **OGC General Tests**{: style="color: crimson"} 
+#### **OGC General Tests**{: style="color: crimson"}
 
 | **TESTS** | **ASSERTIONS** | **IOOS Rq'd/Opt** |
 | --------- | -------------- | :---------------: |
@@ -80,7 +78,7 @@ The IOOS SOS Profile tests have originated from the official OGC CITE test set f
 | | | |
 
 
-#### **IOOS-specific Tests**{: style="color: crimson"} 
+#### **IOOS-specific Tests**{: style="color: crimson"}
 
 | **TESTS** | **ASSERTIONS** | **IOOS Rq'd/Opt** |
 | --------- | -------------- | :---------------: |
@@ -100,9 +98,9 @@ The IOOS SOS Profile tests have originated from the official OGC CITE test set f
 | | | |
 
 
-### **DescribeSensor Tests**{: style="color: crimson"} 
+### **DescribeSensor Tests**{: style="color: crimson"}
 
-#### **OGC General Tests**{: style="color: crimson"} 
+#### **OGC General Tests**{: style="color: crimson"}
 
 | **TESTS** | **ASSERTIONS** | **IOOS Rq'd/Opt** |
 | --------- | -------------- | :---------------: |
@@ -112,7 +110,7 @@ The IOOS SOS Profile tests have originated from the official OGC CITE test set f
 |**describeSensor:core-SOS.DescribeSensor-ResponseMatchingProcedure.1**|The unique identifier in the response document matches the procedure URN specified in the request.| **R** |
 | | | |
 
-#### **IOOS-specific Tests**{: style="color: crimson"} 
+#### **IOOS-specific Tests**{: style="color: crimson"}
 
 | **TESTS** | **ASSERTIONS** | **IOOS Rq'd/Opt** |
 | --------- | -------------- | :---------------: |
@@ -135,11 +133,11 @@ The IOOS SOS Profile tests have originated from the official OGC CITE test set f
 |**describeSensor:IOOS-SOS.DescribeSensor- ResponseContainsValidOperationsMetadataProperty.17**|SensorML document for a single station provides a description of at least one sensor that is located at the station (platform), and for each sensor a ‘sensorID’ and a list of the properties observed by this sensor are provided.| **R** |
 
 
-### **GetObservation Tests**{: style="color: crimson"} 
+### **GetObservation Tests**{: style="color: crimson"}
 
 **_All GetObservation tests use “POST” method, and URL obtained from the GetCapabilities response._**
 
-#### **OGC General Tests**{: style="color: crimson"} 
+#### **OGC General Tests**{: style="color: crimson"}
 
 | **TESTS** | **ASSERTIONS** | **IOOS Rq'd/Opt** |
 | --------- | -------------- | :---------------: |
@@ -163,7 +161,7 @@ The IOOS SOS Profile tests have originated from the official OGC CITE test set f
 |**getObservation:core-SOS.GetObservation-ResponseMatchingResponseFormatData.1**|The format of the response data matches the format supplied in the _responseFormat_ parameter of the request.| **R** |
 | | | |
 
-#### **IOOS-specific Tests**{: style="color: crimson"} 
+#### **IOOS-specific Tests**{: style="color: crimson"}
 
 | **TESTS** | **ASSERTIONS** | **IOOS Rq'd/Opt** |
 | --------- | -------------- | :---------------: |
@@ -198,6 +196,3 @@ The IOOS SOS Profile tests have originated from the official OGC CITE test set f
 |**getObservation:IOOS-SOS.GetObservation-ProfileResponseContainsValidDataArray.1**|A GetObservation response returns a valid child element \<swe2:DataArray definition="http://mmisw.org/ont/ioos/definition/profile"\> with empty \<\<swe2:elementCount\> for each profiling sensor within \<swe2:DataChoice definition="http://mmisw.org/ont/ioos/definition/sensors"\>.|**R**|
 |**getObservation:IOOS-SOS.GetObservation-ProfileResponseContainsValidProfileIndex.1**|A GetObservation response returns for each profiling sensor within \<swe2:DataChoice definition="http://mmisw.org/ont/ioos/definition/sensors"\> a valid \<swe2:field name="profileIndex"\> or \<swe2:field name="binIndex"\> with \<swe2:Count definition="http://mmisw.org/ont/ioos/definition/profileIndex"\> child element that indicates which height/bin is being reported.|**R**|
 | | | |
-
-
-

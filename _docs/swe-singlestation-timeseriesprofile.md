@@ -4,8 +4,6 @@ tags: [formatting]
 keywords: notes, tips, cautions, warnings, admonitions
 last_updated: July 3, 2016
 summary: Template for a SWE Data Record's static and dynamic fields for a station with profiling sensors
-#sidebar: product1_sidebar
-sidebar: mydoc_sidebar
 toc: false
 #permalink: sos-wsdd-github-notoc.html
 
@@ -29,7 +27,7 @@ toc: false
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://www.opengis.net/swe/2.0 http://schemas.opengis.net/sweCommon/2.0/swe.xsd"
   definition="http://mmisw.org/ont/ioos/swe_element_type/observationRecord">
-  
+
   <!-- STATIC DATA -->
   <!-- This field "stations" contains static data for all stations and sensors in the response -->
   <!-- Static data is linked to dynamic data (sensor observation values) via an abbreviated, -->
@@ -50,7 +48,7 @@ toc: false
       <swe2:field name="wmo_41001">
         <!-- IoosTech Convention: -->
         <!-- The data record containing the static data for a station shall be defined -->
-        <swe2:DataRecord id="wmo_41001" 
+        <swe2:DataRecord id="wmo_41001"
           definition="http://mmisw.org/ont/ioos/swe_element_type/station">
           <swe2:field name="stationID">
             <!-- IoosTech Convention: -->
@@ -118,7 +116,7 @@ toc: false
                 <!-- The data record containing the static data for a sensor shall be defined -->
                 <!-- Reminder: the DataRecord id of a sensor in the static block matches the DataChoice item -->
                 <!-- name in the dynamic block -->
-                <swe2:DataRecord id="wmo_41001_sensor1" 
+                <swe2:DataRecord id="wmo_41001_sensor1"
                   definition="http://mmisw.org/ont/ioos/swe_element_type/sensor">
                   <!-- An example of an acoustic doppler current profiler -->
                   <swe2:field name="sensorID">
@@ -334,10 +332,10 @@ toc: false
                           tokenSeparator=","
                           blockSeparator="&#10;" />
                       </swe2:encoding>
-                      <swe2:values> 
-                        -5.0 
-                        -10.0 
-                        -20.0 
+                      <swe2:values>
+                        -5.0
+                        -10.0
+                        -20.0
                       </swe2:values>
                     </swe2:DataArray>
                   </swe2:field>
@@ -392,7 +390,7 @@ toc: false
                 <!-- IoosTech Convention: -->
                 <!-- The data record containing the dynamic observation descriptors for a sensor shall be defined -->
                 <swe2:DataRecord definition="http://mmisw.org/ont/ioos/swe_element_type/sensor">
-                  
+
                   <swe2:field name="adcpProfile">
                     <swe2:DataArray definition="http://mmisw.org/ont/ioos/swe_element_type/profile">
                       <swe2:description>Array of synchronous observations in a Profile</swe2:description>
@@ -420,19 +418,19 @@ toc: false
                               </swe2:constraint>
                             </swe2:Count>
                           </swe2:field>
-                          
+
                           <swe2:field name="direction_of_sea_water_velocity">
                             <swe2:Quantity definition="http://mmisw.org/ont/cf/parameter/direction_of_sea_water_velocity">
                               <swe2:uom code="deg" />
                             </swe2:Quantity>
                           </swe2:field>
-                          
+
                           <swe2:field name="sea_water_speed">
                             <swe2:Quantity definition="http://mmisw.org/ont/cf/parameter/sea_water_speed">
                               <swe2:uom code="cm/s" />
                             </swe2:Quantity>
                           </swe2:field>
-                          
+
                         </swe2:DataRecord>
                       </swe2:elementType>
                     </swe2:DataArray>
@@ -452,7 +450,7 @@ toc: false
                       </swe2:elementCount>
                       <swe2:elementType name="profileObservation">
                         <swe2:DataRecord definition="http://mmisw.org/ont/ioos/swe_element_type/profileObservation">
-                          
+
                           <swe2:field name="binIndex">
                             <!-- IoosTech Convention: -->
                             <!-- A count element, constrained by the maximum dimension of the array -->
@@ -466,13 +464,13 @@ toc: false
                               </swe2:constraint>
                             </swe2:Count>
                           </swe2:field>
-                            
+
                           <swe2:field name="sea_water_temperature">
                             <swe2:Quantity definition="http://mmisw.org/ont/cf/parameter/sea_water_temperature">
                               <swe2:uom code="Cel" />
                             </swe2:Quantity>
                           </swe2:field>
-                          
+
                         </swe2:DataRecord>
                       </swe2:elementType>
                     </swe2:DataArray>
@@ -512,7 +510,7 @@ toc: false
           tokenSeparator=","
           blockSeparator="&#10;" />
       </swe2:encoding>
-      <swe2:values> 
+      <swe2:values>
         2009-05-23T00:00:00Z,wmo_41001_sensor1,2,0,359.0,10.0,3,352.0,9.6
         2009-05-23T01:00:00Z,wmo_41001_sensor1,1,2,345.0,10.4
         2009-05-23T02:00:00Z,wmo_41001_sensor1,4,0,332.0,10.5,1,334.0,10.3,2,336.0,10.1,3,335.0,9.9

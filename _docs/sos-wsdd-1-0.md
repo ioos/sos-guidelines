@@ -4,8 +4,6 @@ tags: [formatting]
 keywords: notes, tips, cautions, warnings, admonitions
 last_updated: July 3, 2016
 summary: A detailed description of the IOOS Sensor Observation Service v1.0, which is based on the OpenGIS SOS 1.0.0 Implementation Specification (OGC 06-009r6)
-sidebar: mydoc_sidebar
-#topnav: topnav
 toc: false
 #permalink: sos-wsdd-1-0.html
 ---
@@ -180,14 +178,14 @@ The following HTTP/GET and HTTP/POST request samples, when issued to the SOS ser
 - **HTTP/GET** to ncSOS implementation without parameters
   - **`http://SERVERNAME:PORT/SOS_WEBAPP_NAME/sos?`**<br><br>
 - **HTTP/POST**
- 
+
 ```
-<sos:GetCapabilities 
-xmlns="http://www.opengis.net/sos/1.0" 
-xmlns:ows="http://www.opengis.net/ows/1.1" 
-xmlns:ogc="http://www.opengis.net/ogc" 
-xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-xsi:schemaLocation="http://www.opengis.net/sos/1.0 http://schemas.opengis.net/sos/1.0.0/sosGetCapabilities.xsd" 
+<sos:GetCapabilities
+xmlns="http://www.opengis.net/sos/1.0"
+xmlns:ows="http://www.opengis.net/ows/1.1"
+xmlns:ogc="http://www.opengis.net/ogc"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.opengis.net/sos/1.0 http://schemas.opengis.net/sos/1.0.0/sosGetCapabilities.xsd"
 service="SOS" updateSequence="">
     <ows:AcceptVersions>
         <ows:Version>1.0.0</ows:Version>
@@ -216,9 +214,9 @@ The example below shows all five sections depicted in the figure above, and assu
 
 
 ```XML
-<sos:Capabilities 
-xmlns:sos="http://www.opengis.net/sos/1.0" 
-xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+<sos:Capabilities
+xmlns:sos="http://www.opengis.net/sos/1.0"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns:ows="http://www.opengis.net/ows/1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:gml="http://www.opengis.net/gml" xmlns:ogc="http://www.opengis.net/ogc" version="1.0.0" xsi:schemaLocation="http://www.opengis.net/sos/1.0 http://schemas.opengis.net/sos/1.0.0/sosAll.xsd">
   <ows:ServiceIdentification>...</ows:ServiceIdentification>
   <ows:ServiceProvider>...</ows:ServiceProvider>
@@ -350,11 +348,11 @@ In addition tothe SOS v1.0.0 Implementation Specification, the IOOS Convention r
       </ows:AllowedValues>
     </ows:Parameter>
     <ows:ExtendedCapabilities>
-      <gml:metaDataProperty xlink:title="ioosTemplateVersion" 
+      <gml:metaDataProperty xlink:title="ioosTemplateVersion"
         xlink:href="http://code.google.com/p/ioostech/source/browse/#svn%2Ftrunk%2Ftemplates%2FMilestone1.0">
         <gml:version>1.0</gml:version>
       </gml:metaDataProperty>
-      <gml:metaDataProperty xlink:title="softwareVersion" 
+      <gml:metaDataProperty xlink:title="softwareVersion"
           xlink:href="http://someURI">
           <gml:version>0.9.4.5</gml:version>
       </gml:metaDataProperty>
@@ -639,11 +637,11 @@ http://SERVERNAME:PORT/SOS_WEBAPP_NAME/sos?request=DescribeSensor&service=SOS&ve
 ```XML
 <sos:DescribeSensor version="1.0.0" service="SOS"
   xmlns="http://www.opengis.net/sos/1.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-  xsi:schemaLocation="http://www.opengis.net/sos/1.0  http://schemas.opengis.net/sos/1.0.0/sosDescribeSensor.xsd" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.opengis.net/sos/1.0  http://schemas.opengis.net/sos/1.0.0/sosDescribeSensor.xsd"
   outputFormat="text/xml;subtype=&quot;sensorML/1.0.1/profiles/ioos_sos/1.0&quot;">
   <procedure>urn:ioos:network:test:all</procedure>
-</sos:DescribeSensor> 
+</sos:DescribeSensor>
 ```
 
 
@@ -656,14 +654,14 @@ The response to a DescribeSensor request is a [Sensor Model Language (SensorML](
 <a name="Fig_6"></a> **Figure 6: DescribeSensor response schema**<br><br>
 
 ```XML
-<sml:SensorML> 
+<sml:SensorML>
     <sml:capabilities name="ioosServiceMetadata">
                 Version of the IOOS Template used in this document  
     </sml:capabilities>
     <sml:member>
         <sml:System>
             <gml:description>
-                      Collection of all station assets available via the RA’s network SOS service 
+                      Collection of all station assets available via the RA’s network SOS service
             </gml:description>
             <gml:name>
                       urn:ioos:network:ra_name:all
@@ -671,91 +669,91 @@ The response to a DescribeSensor request is a [Sensor Model Language (SensorML](
             <gml:boundedBy>
                       Spatial bounds of the content described by this network
             </gml:boundedBy>
-            <sml:identification> 
-                      networkID, shortName and longName 
-            </sml:identification> 
-            <sml:classification> 
-                      All classifiers that apply to this network offering 
-            </sml:classification> 
-            <sml:validTime> 
-                      Represents the date range of the validity of this document 
-            </sml:validTime> 
-            <sml:capabilities name="observationTimeRange"> 
-                  TimeRange element describes the valid time range over which observations from a sensor or station exist 
+            <sml:identification>
+                      networkID, shortName and longName
+            </sml:identification>
+            <sml:classification>
+                      All classifiers that apply to this network offering
+            </sml:classification>
+            <sml:validTime>
+                      Represents the date range of the validity of this document
+            </sml:validTime>
+            <sml:capabilities name="observationTimeRange">
+                  TimeRange element describes the valid time range over which observations from a sensor or station exist
             </sml:capabilities>
-            <sml:contact> 
-                      List all publisher and operator contacts that apply to this network 
-            </sml:contact> 
-            <sml:components> 
+            <sml:contact>
+                      List all publisher and operator contacts that apply to this network
+            </sml:contact>
+            <sml:components>
                 <sml:ComponentList>
-                       List all platforms in the network offering 
+                       List all platforms in the network offering
                     <sml:component name='platform_#01_name'>
                         <sml:System>
-                            <sml:identification> 
-                                      The names of the platform #01 (stationID, shortName and longName) 
-                            <sml:capabilities name="observationTimeRange"> 
-                               TimeRange element describes the valid time range over which observations from platform #01 exist 
-                            <sml:location> 
-                                      Platform #01 geographic location (lat & lon only, no z) 
-                            <sml:outputs> 
-                                       A list of the observed properties assotiated with the platform #01 
-                            <sml:components> 
+                            <sml:identification>
+                                      The names of the platform #01 (stationID, shortName and longName)
+                            <sml:capabilities name="observationTimeRange">
+                               TimeRange element describes the valid time range over which observations from platform #01 exist
+                            <sml:location>
+                                      Platform #01 geographic location (lat & lon only, no z)
+                            <sml:outputs>
+                                       A list of the observed properties assotiated with the platform #01
+                            <sml:components>
                                 <sml:ComponentList>
-                                       List of sensors in the platform #01 
+                                       List of sensors in the platform #01
                                     <sml:component name='sensor_A_name'>
                                         <sml:System>
                                              <gml:description>
-                                                        Description of sensor A 
+                                                        Description of sensor A
                                              </gml:description>
                                              <gml:name>
-                                                        urn:ioos:sensor:platform_name:sensor_name 
+                                                        urn:ioos:sensor:platform_name:sensor_name
                                              </gml:name>
-                                             <sml:identification> 
-                                                      Names of the sensor A (sationID, shortName and longName) 
-                                             </sml:identification> 
-                                             <sml:capabilities name="featureOfInterest"> 
-                                               Feature of interest that sensor A belongs to 
-                                             </sml:capabilities> 
-                                             <sml:capabilities name="offerings"> 
-                                               List of all offerings associated with the sensor A 
-                                             </sml:capabilities> 
-                                             <sml:capabilities name="stationProcedure"> 
-                                               The ID of the platform (procedure), on which sensor A is installed 
-                                             </sml:capabilities> 
-                                             <sml:capabilities name="observationTimeRange"> 
-                                               The valid time range over which observations from sensor A exist 
-                                             </sml:capabilities> 
-                                             <sml:inputs> 
-                                                      Observation phenomena associated with the sensor A 
-                                             </sml:inputs> 
-                                             <sml:outputs> 
-                                                       A list of the outputs assotiated with the sensor A 
-                                             </sml:outputs> 
+                                             <sml:identification>
+                                                      Names of the sensor A (sationID, shortName and longName)
+                                             </sml:identification>
+                                             <sml:capabilities name="featureOfInterest">
+                                               Feature of interest that sensor A belongs to
+                                             </sml:capabilities>
+                                             <sml:capabilities name="offerings">
+                                               List of all offerings associated with the sensor A
+                                             </sml:capabilities>
+                                             <sml:capabilities name="stationProcedure">
+                                               The ID of the platform (procedure), on which sensor A is installed
+                                             </sml:capabilities>
+                                             <sml:capabilities name="observationTimeRange">
+                                               The valid time range over which observations from sensor A exist
+                                             </sml:capabilities>
+                                             <sml:inputs>
+                                                      Observation phenomena associated with the sensor A
+                                             </sml:inputs>
+                                             <sml:outputs>
+                                                       A list of the outputs assotiated with the sensor A
+                                             </sml:outputs>
                                         </sml:System>
                                     </sml:component>
                                         […]
                                     <sml:component name='sensor_K_name'>
-                                              Description of sensor K 
+                                              Description of sensor K
                                         […]
                                     </sml:component>
                                     <sml:component name='sensor_T_name'>
-                                              Description of sensor T 
+                                              Description of sensor T
                                     </sml:component>
                                 </sml:ComponentList>
-                            </sml:components> 
+                            </sml:components>
                         </sml:System>
                     </sml:component>
                         […]
                     <sml:component name='platform_#NN_name'>
-                              Description of the platform #NN 
+                              Description of the platform #NN
                         […]
                     </sml:component>
                     <sml:component name='platform_#ZZ_name'>
-                              Description of the platform #ZZ 
+                              Description of the platform #ZZ
                         […]
                     </sml:component>
                 </sml:ComponentList>
-            </sml:components> 
+            </sml:components>
         </sml:System>
     </sml:member>
 </sml:SensorML>
@@ -780,7 +778,7 @@ A mandatory **DescribeSensor** response for a specific platform/station shall re
   -   operatorSector
   -   publisher
   -   sponsor
-  -   parentNetwork                         
+  -   parentNetwork                        
 -   mandatory platform geographic location (always in EPSG::4326)
 -   time range for observations
 -   optional documentation (external human-readable resources about the platform)
@@ -788,13 +786,13 @@ A mandatory **DescribeSensor** response for a specific platform/station shall re
 
 ```XML
 <!-- Template document for a generic (independant of feature type) Describe Sensor Station -->
-<sml:SensorML 
-  xmlns:sml="http://www.opengis.net/sensorML/1.0.1" 
-  xmlns:gml="http://www.opengis.net/gml" 
-  xmlns:swe="http://www.opengis.net/swe/1.0.1" 
-  xmlns:xlink="http://www.w3.org/1999/xlink" 
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-  xsi:schemaLocation="http://www.opengis.net/sensorML/1.0.1 http://schemas.opengis.net/sensorML/1.0.1/sensorML.xsd" 
+<sml:SensorML
+  xmlns:sml="http://www.opengis.net/sensorML/1.0.1"
+  xmlns:gml="http://www.opengis.net/gml"
+  xmlns:swe="http://www.opengis.net/swe/1.0.1"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.opengis.net/sensorML/1.0.1 http://schemas.opengis.net/sensorML/1.0.1/sensorML.xsd"
   version="1.0.1">
   <sml:capabilities name="ioosServiceMetadata">
     <swe:SimpleDataRecord>
@@ -804,7 +802,7 @@ A mandatory **DescribeSensor** response for a specific platform/station shall re
         </swe:Text>
       </swe:field>
     </swe:SimpleDataRecord>
-  </sml:capabilities> 
+  </sml:capabilities>
  <sml:member>
     <sml:System>
       <gml:description>Observations at urn:ioos:station:wmo:41001 buoy station, 150 NM East of Cape HATTERAS</gml:description>
@@ -1104,13 +1102,13 @@ A mandatory DescribeSensor response for a network of platforms/stations shall re
 The template for a generic DescribeSensor document for network is shown below. The template is independent of feature types, and presents just enough metadata to determine what additional descriptions are needed. The specifics of some elements’ use in the network template are discussed in details later.
 
 ```XML
-<sml:SensorML 
-    xmlns:sml="http://www.opengis.net/sensorML/1.0.1" 
-    xmlns:gml="http://www.opengis.net/gml" 
-    xmlns:swe="http://www.opengis.net/swe/1.0.1" 
-    xmlns:xlink="http://www.w3.org/1999/xlink" 
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-    xsi:schemaLocation="http://www.opengis.net/sensorML/1.0.1 http://schemas.opengis.net/sensorML/1.0.1/sensorML.xsd" 
+<sml:SensorML
+    xmlns:sml="http://www.opengis.net/sensorML/1.0.1"
+    xmlns:gml="http://www.opengis.net/gml"
+    xmlns:swe="http://www.opengis.net/swe/1.0.1"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.opengis.net/sensorML/1.0.1 http://schemas.opengis.net/sensorML/1.0.1/sensorML.xsd"
     version="1.0.1">
     <sml:capabilities name="ioosServiceMetadata">
         <swe:SimpleDataRecord>
@@ -1120,7 +1118,7 @@ The template for a generic DescribeSensor document for network is shown below. T
                 </swe:Text>
             </swe:field>
         </swe:SimpleDataRecord>
-    </sml:capabilities> 
+    </sml:capabilities>
     <sml:member>
         <sml:System>
             <gml:description>Collection of all station assets available via the NANOOS SOS service</gml:description>
@@ -1130,7 +1128,7 @@ The template for a generic DescribeSensor document for network is shown below. T
                     <gml:lowerCorner>32.7 -75.0</gml:lowerCorner>
                     <gml:upperCorner>34.7 -72.0</gml:upperCorner>
                 </gml:Envelope>
-            </gml:boundedBy> 
+            </gml:boundedBy>
             <sml:identification>
                 <sml:IdentifierList>
                     <sml:identifier name="networkID">
@@ -1338,7 +1336,7 @@ The OGC SOS v1.0.0 Implementation Standard defines a number of other parameters 
 | procedure | 0…* | Specifies the sensor system(s) for which observations are requested; defines a filter for the procedure property of the observations. The type is “anyURI”, and it must match the value of the “xlink:href=” attribute in an \<sos:procedure\> element advertized in GetCapabilities response . <br /><br />Examples:{::nomarkdown}<ul><li>Network<br /><pre>urn:ioos:network:test:all</pre></li><li>Station/Platform<br /><pre>urn:ioos:station:test:station_name</pre></li><li>Sensor<br /><pre>urn:ioos:sensor:test:station_name:sensor_name</pre> </li></ul>{:/}|
 |eventTime | 0…1 | Specifies the time period(s) for which observations are requested. <br /><br />The time should conform to ISO format: YYYY-MM-DDTHH:mm:ss±HH. Time instance is given as one time value. Periods of time (start and end) are separated by "/". For example: 2009-06-26T10:00:00+01/2009-06-26T11:00:00+01.<br />Although SOS v1.0 specification allows requests with no temporal boundaries, the SOS v1.0 fails to properly describe the server response to such request. For that specific case, the IOOS Convention requires SOS server to follow the SOS v2.0 specification, and return all records matching a user’s request. However, as a result limit may be employed by the SOS server, a ResponseExceedsSizeLimit exception code will be returned instead if that limit is exceeded. |
 | featureOfInterest | 0…* | Specifies the feature for which observations are requested. This should be presented in a form of comma-separated URIs advertised in the GetCapabilities document or a bounding box for requested data, i.e. featureOfInterest=BBOX:min_lon,min_lat,max_lon,max_lat |
-| resultModel | 0…* | Specifies the name of the root element of a GetObservation response. The IOOS Convention requires resultModel to be “om:ObservationCollection”. 
+| resultModel | 0…* | Specifies the name of the root element of a GetObservation response. The IOOS Convention requires resultModel to be “om:ObservationCollection”.
 | srsName | 0…1 | Attribute that defines the spatial reference system that should be used for any geometry that is returned in the response. <br />If present, it must be one of the advertised CRS values specified in \<gml:srsName\> element or “srsName” attribute of the \<gml:boundedBy/gml:Envelope\> element in the GetCapabilities document.<br />If omitted, it is assumed that the CRS is WGS 84 identified as urn:ogc:def:crs:EPSG::4326 “ |
 | result | 0…1 | Instructs the SOS to only return observations where the result matches the expression or value. For example, CO-OPS supports a long list of constraints such as IGLD (`urn:ioos:def:datum:noaa::IGLD`), MHHW (`urn:ioos:def:datum:noaa::MHHW`), NAVD (`urn:ogc:def:datum:epsg::5103`), and so forth. |
 | responseMode | 0…1 | Specifies whether results are requested in-line, out-of-band, as an attachment or resultTemplate. |
@@ -1367,7 +1365,7 @@ http://SERVERNAME:PORT/SOS_WEBAPP_NAME/sos?service=SOS&version=1.0.0&request=Get
 ```XML
 <sos:GetObservation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.opengis.net/sos/1.0 http://schemas.opengis.net/sos/1.0.0/sosAll.xsd"
-    xmlns:sos="http://www.opengis.net/sos/1.0" 
+    xmlns:sos="http://www.opengis.net/sos/1.0"
     xmlns:om="http://www.opengis.net/om/1.0"
     service="SOS" version="1.0.0" srsName="EPSG:4326">
     <sos:offering>urn:ioos:network:test:all</sos:offering>
@@ -1404,7 +1402,7 @@ The outline of the OM-GetObservation template is presented below:
                             A human-readable disclaimer if considered useful
     </gml:metaDataProperty>
     <gml:metaDataProperty xlink:title="ioosTemplateVersion"
-                            A version of the IOOS Template used in this document 
+                            A version of the IOOS Template used in this document
     </gml:metaDataProperty>
     <om:member>
                             Contains all observation offerings for the same feature type (e.g. timeSeries)
@@ -1414,7 +1412,7 @@ The outline of the OM-GetObservation template is presented below:
                             as well as sensor or procedure information if possible                             
             </gml:description>
             <om:samplingTime>
-                            Descrition of the time range over which the reported observations from a sensor or station exist 
+                            Descrition of the time range over which the reported observations from a sensor or station exist
             </om:samplingTime>
             <om:procedure>
                             List of all stations (sensor systems) for which observations are reported
@@ -1430,7 +1428,7 @@ The outline of the OM-GetObservation template is presented below:
                             Description of the geographic (lat/ lon) Bounding Box of the feature                   
                     </gml:boundedBy>
                     <gml:location>
-                            List of geographical positions of the stations that fall inside the Bounding Box 
+                            List of geographical positions of the stations that fall inside the Bounding Box
                     </gml:location>
             </om:featureOfInterest>
             <om:result>
@@ -1554,11 +1552,11 @@ In general, IOOS Convention does not prescribe how data should be allocated to t
               <swe2:DataRecord id="wmo_41001_sensor1" definition="http://mmisw.org/ont/ioos/definition/sensor">
                 <swe2:field name="sensorID">
                     An identifier for the sensor in a form of URN that conforms to the IOOS Conventions for Observing Asset Identifiers.
-                    It may either use a meaningful name (e.g. "sbe16") or be just a simple, constant string followed by an integer counter such as "sensor1", "sensor2", "salt1", etc. 
+                    It may either use a meaningful name (e.g. "sbe16") or be just a simple, constant string followed by an integer counter such as "sensor1", "sensor2", "salt1", etc.
                 </swe2:field>
                 <swe2:field name="height">
                     The vertical position of the non-profiling sensor relative to the platformLocation.
-                    It may also be described in a dynamic part, if varies among observations. 
+                    It may also be described in a dynamic part, if varies among observations.
                 </swe2:field>
                 <swe2:field name="sensorOrientation">
                     Optional vector parameter, recommended for a profiling sensor such as an ADCP.
@@ -1602,11 +1600,11 @@ The IOOS Convention requires that stationID or sensorID is described in the \<
 </swe2:field>
 ```
 
-The IOOS Convention requires that description of each sensor's position encompasses three components: 
-1. description of a Platform Location specified within a global Reference Frame; 
-2. description of the Local Frame assigned to the platform; and 
+The IOOS Convention requires that description of each sensor's position encompasses three components:
+1. description of a Platform Location specified within a global Reference Frame;
+2. description of the Local Frame assigned to the platform; and
 3. description of the sensor position relative to the platform's Local Frame.
- 
+
 Depending on the platform type, IOOS Convention specifies two global Reference Frames:
 - for floating buoys, the _**referenceFrame**_ is a 3D Compound CRS that combines EPSG::4326 for the platform horizontal coordinates with EPSG::5829 vertical CRS for the platform's vertical coordinate (referenceFrame="http://www.opengis.net/def/crs-compound?1=http://www.opengis.net/def/crs/EPSG/0/4326&2=http://www.opengis.net/def/crs/EPSG/0/5829);
 - for a tide gauge or a platform at a fixed location relative to the Geoid (MSL), a single 3D CRS EPSG::4979 has to be used. (referenceFrame="http://www.opengis.net/def/crs/EPSG/0/4979").
@@ -1641,7 +1639,7 @@ The following fragment of the IOOS Milestone 1.0 Template illustrates the platfo
 ```
 
 In regard to the position of the sensors located at the platform, the IOOS Convention only requires that sensor height relative to the platform’s _**localFrame**_ is specified for a non-profiling sensor. Regardless of platform's sensors allocation in reference to the water surface, the IOOS Convention stipulates that position description should follow the EPSG:5829, i.e.  
-- sensor’s position should always be reported as height (vertical upward); and 
+- sensor’s position should always be reported as height (vertical upward); and
 - sensor’s position below the water surface should be reported as height with negative value.
 
 The following fragment of the IOOS Milestone 1.0 Template illustrates just that simplified approach to sensors’ location description; if more information about sensor orientation and relative position is available, then it must be recorded in accordance with the SWE Common v2.0 specification:
@@ -1667,11 +1665,11 @@ The static data block in GetObservations document may include any common QA/QC i
 ```XML
 <swe2:field name="stationID">
   <swe2:Text definition="http://mmisw.org/ont/ioos/definition/stationID">
-    
+
     <swe2:quality>
                   Any valid static quality information about this station can be placed here.
     </swe2:quality>
- 
+
     <swe2:value>urn:ioos:station:wmo:41001</swe2:value>
   </swe2:Text>
 </swe2:field>
@@ -1680,11 +1678,11 @@ The static data block in GetObservations document may include any common QA/QC i
 ```XML
 <swe2:field name="sensorID">
   <swe2:Text definition="http://mmisw.org/ont/ioos/definition/sensorID">
-    
+
     <swe2:quality>
                   Any valid static quality information about this sensor can be placed here.
     </swe2:quality>
- 
+
     <swe2:value>urn:ioos:station:wmo:41001:sensor2</swe2:value>
   </swe2:Text>
 </swe2:field>
@@ -1836,10 +1834,10 @@ For non-binned profiling sensors, the IOOS Convention requires a description of 
                 tokenSeparator=","
                 blockSeparator="&#10;" />
         </swe2:encoding>
-        <swe2:values> 
-            -5.0 
-            -10.0 
-            -20.0 
+        <swe2:values>
+            -5.0
+            -10.0
+            -20.0
         </swe2:values>
     </swe2:DataArray>
 </swe2:field>
@@ -1878,7 +1876,7 @@ The simplified outline of the dynamic data block is presented below. The outline
                                          Defines observedProperties for the “adcpProfile_sensor2” located at the station “wmo_41001”
                             <swe2:DataRecord definition="http://mmisw.org/ont/ioos/definition/sensor">
                                 <swe2:field name="adcpProfile">
-                                         Contains nested DataArray for profile dynamic data to encode observations 
+                                         Contains nested DataArray for profile dynamic data to encode observations
                                          at multiple heights in one record
                                     <swe2:DataArray definition="http://mmisw.org/ont/ioos/definition/profile">
                                         <swe2:description>Array of synchronous observations in a Profile</swe2:description>
@@ -2094,7 +2092,7 @@ In order to define a composite flag that may have several components with variou
                         <swe2:DataRecord definition="http://mmisw.org/ont/ioos/definition/sensor">
                             <swe2:field name="air_temperature">
                                 <swe2:Quantity definition="http://mmisw.org/ont/cf/parameter/air_temperature">
-                                    
+
                                     <swe2:quality>
                                         <swe2:Category definition="http://sdftest.ndbc.noaa.gov/sos/qcflags.shtml">
                                             <swe2:label>EQC Flag</swe2:label>
@@ -2114,7 +2112,7 @@ In order to define a composite flag that may have several components with variou
                                             </swe2:constraint>
                                         </swe2:Category>
                                     </swe2:quality>
-                                    
+
                                     <swe2:quality>
                                         <swe2:Category definition="http://sdftest.ndbc.noaa.gov/sos/qcflags.shtml">
                                             <swe2:label>DQA Flag 1</swe2:label>
@@ -2145,7 +2143,7 @@ In order to define a composite flag that may have several components with variou
                                             </swe2:constraint>
                                         </swe2:Category>
                                     </swe2:quality>
-                                    
+
                                     <swe2:quality>
                                         <swe2:Category definition="http://sdftest.ndbc.noaa.gov/sos/qcflags.shtml">
                                             <swe2:label>DQA Flag 2</swe2:label>
@@ -2162,8 +2160,8 @@ In order to define a composite flag that may have several components with variou
                 </swe2:DataChoice>
             </swe2:field>
         </swe2:DataRecord>
-    </swe2:elementType>	
-    
+    </swe2:elementType>
+
     <swe2:values>
         2009-05-23T00:00:00Z,a,wmo_41001_sensor1,15.4,T,a,r,2.0,280
         2009-05-23T01:00:00Z,b,wmo_41001_sensor1,15.8,M,j,j,1.8,121
@@ -2196,7 +2194,7 @@ Similar to the non-profiling sensors, the sensor names used in the **DataChoice*
 <swe2:DataChoice definition="http://mmisw.org/ont/ioos/definition/sensors">
     <swe2:item name="wmo_41001_sensor1">
         <swe2:DataRecord definition="http://mmisw.org/ont/ioos/definition/sensor">
-            
+
             <swe2:field name="adcpProfile">
                 <swe2:DataArray definition="http://mmisw.org/ont/ioos/definition/profile">
                     <swe2:description>Array of synchronous observations in a Profile</swe2:description>
@@ -2205,7 +2203,7 @@ Similar to the non-profiling sensors, the sensor names used in the **DataChoice*
                     </swe2:elementCount>
                     <swe2:elementType name="profileObservation">
                         <swe2:DataRecord definition="http://mmisw.org/ont/ioos/definition/profileObservation">
-                            
+
                             <swe2:field name="profileIndex">
                                 <swe2:Count definition="http://mmisw.org/ont/ioos/definition/profileIndex">
                                     <swe2:constraint>
@@ -2215,26 +2213,26 @@ Similar to the non-profiling sensors, the sensor names used in the **DataChoice*
                                     </swe2:constraint>
                                 </swe2:Count>
                             </swe2:field>
-                            
+
                             <swe2:field name="direction_of_sea_water_velocity">
                                 <swe2:Quantity definition="http://mmisw.org/ont/cf/parameter/direction_of_sea_water_velocity">
                                     <swe2:uom code="deg" />
                                 </swe2:Quantity>
                             </swe2:field>
-                            
+
                             <swe2:field name="sea_water_speed">
                                 <swe2:Quantity definition="http://mmisw.org/ont/cf/parameter/sea_water_speed">
                                     <swe2:uom code="cm/s" />
                                 </swe2:Quantity>
                             </swe2:field>
-                            
+
                         </swe2:DataRecord>
                     </swe2:elementType>
                 </swe2:DataArray>
             </swe2:field>
         </swe2:DataRecord>
     </swe2:item>
-    
+
     <swe2:item name="wmo_41001_sensor2">
         <swe2:DataRecord>
             <swe2:field name="thermisterProfile">
@@ -2244,7 +2242,7 @@ Similar to the non-profiling sensors, the sensor names used in the **DataChoice*
                     </swe2:elementCount>
                     <swe2:elementType name="profileObservation">
                         <swe2:DataRecord definition="http://mmisw.org/ont/ioos/definition/profileObservation">
-                            
+
                             <swe2:field name="binIndex">
                                 <swe2:Count definition="http://mmisw.org/ont/ioos/definition/profileIndex">
                                     <swe2:constraint>
@@ -2254,24 +2252,21 @@ Similar to the non-profiling sensors, the sensor names used in the **DataChoice*
                                     </swe2:constraint>
                                 </swe2:Count>
                             </swe2:field>
-                            
+
                             <swe2:field name="sea_water_temperature">
                                 <swe2:Quantity definition="http://mmisw.org/ont/cf/parameter/sea_water_temperature">
                                     <swe2:uom code="Cel" />
                                 </swe2:Quantity>
                             </swe2:field>
-                            
+
                         </swe2:DataRecord>
                     </swe2:elementType>
                 </swe2:DataArray>
             </swe2:field>
         </swe2:DataRecord>
     </swe2:item>
-    
+
 </swe2:DataChoice>
 ```
 
 **************
-
-
-
