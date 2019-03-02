@@ -14,7 +14,7 @@ toc: false
   -->
 
 
-# **Glossary**{: style="color: crimson"}
+# **Glossary**
 
 Term | Definition
 :-----| :--------
@@ -34,7 +34,7 @@ Feature of Interest | A feature that relates to the observations, and represente
 Offering | A collection of sensors used to conveniently group them up (e.g. network:all, network:all-temperature, sensor:watertemp, etc.) and is represented as `<sos:ObservationOffering>` element of the SOS standard.
 
 
-# **Acronyms and Abbreviations**{: style="color: crimson"}
+# **Acronyms and Abbreviations**
 
 Acronym|Definition
  :----- |:-----
@@ -121,7 +121,7 @@ XML|eXtensible Markup Language
 
 
 
-# **Applicable Documents**{: style="color: crimson"}
+# **Applicable Documents**
 
 | #  | Name and Location  |
 | :---: | :--- |
