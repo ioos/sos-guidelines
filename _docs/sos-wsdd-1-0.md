@@ -3,7 +3,7 @@ title: Web Service Description Document for IOOS SOS 1.0
 tags: [formatting]
 keywords: notes, tips, cautions, warnings, admonitions
 last_updated: July 3, 2016
-summary: A detailed description of the IOOS Sensor Observation Service v1.0, which is based on the OpenGIS SOS 1.0.0 Implementation Specification (OGC 06-009r6)
+summary: Deprecation Notice - This guidance was deprecated by IOOS on 2020-01-10 and is superceded by the IOOS Metadata Profile 1.2.  Please read the Deprecation Notice below for more information.  Original Summary - A detailed description of the IOOS Sensor Observation Service v1.0, which is based on the OpenGIS SOS 1.0.0 Implementation Specification (OGC 06-009r6)
 toc: false
 #permalink: sos-wsdd-1-0.html
 ---
@@ -12,6 +12,15 @@ toc: false
 * TOC
 {:toc}
   -->
+
+
+# **Deprecation Notice** 
+
+**Notice:** This convention has been deprecated due to IOOS' transition from the OGC SOS/SWE suite of standards to [ERDDAP](https://coastwatch.pfeg.noaa.gov/erddap) for in situ data dissemination.  
+
+All relevant guidance in this standard has been superceded as of the **2020-01-10** publication date of the [IOOS Metadata Profile 1.2](https://ioos.github.io/ioos-metadata/).  Please refer to the IOOS Metadata Profile for current guidance.
+
+The information below is retained for historical reference purposes only.
 
 
 # **Introduction**

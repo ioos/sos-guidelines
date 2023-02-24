@@ -3,7 +3,7 @@ title: Reference Information
 tags: [formatting]
 keywords: notes, tips, cautions, warnings, admonitions
 last_updated: July 3, 2016
-summary: IOOS SOS v1.0 Web Service Description
+summary: Deprecation Notice - This guidance was deprecated by IOOS on 2020-01-10 and is superceded by the IOOS Metadata Profile 1.2.  Please read the Deprecation Notice below for more information.  Original Summary - IOOS SOS v1.0 Web Service Description
 toc: false
 #permalink: sos-wsdd-github-notoc.html
 ---
@@ -12,6 +12,15 @@ toc: false
 * TOC
 {:toc}
   -->
+
+
+# **Deprecation Notice** 
+
+**Notice:** This convention has been deprecated due to IOOS' transition from the OGC SOS/SWE suite of standards to [ERDDAP](https://coastwatch.pfeg.noaa.gov/erddap) for in situ data dissemination.  
+
+All relevant guidance in this standard has been superceded as of the **2020-01-10** publication date of the [IOOS Metadata Profile 1.2](https://ioos.github.io/ioos-metadata/).  Please refer to the IOOS Metadata Profile for current guidance.
+
+The information below is retained for historical reference purposes only.
 
 
 # **Glossary**
