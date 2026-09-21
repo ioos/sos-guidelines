@@ -9,14 +9,21 @@ on:
 
   workflow_dispatch:
 
+# no permissions by default
+permissions: {}
 
 jobs:
   sync_theme_submodules:
     if: github.repository_owner == 'ioos' # only run if ioos owns repo
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
     - name: Checkout repo
-      uses: actions/checkout@v3
+      uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+      with:
+        fetch-depth: 0
+        persist-credentials: false
 
     - name: submodule checkout
       run: |
